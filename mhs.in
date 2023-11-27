@@ -1,0 +1,6 @@
+#!/bin/sh
+
+MHS_PREFIX=${MHS_PREFIX:-@PREFIX@}
+export MHSDIR=$MHS_PREFIX/lib/mhs
+
+$MHS_PREFIX/bin/mhs $*
