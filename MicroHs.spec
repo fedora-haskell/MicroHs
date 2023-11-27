@@ -7,8 +7,8 @@
 # fails on i686
 
 # currently not wired up
-%bcond ghc 0
-%bcond compiler_bootstrap 1
+%bcond_with ghc
+%bcond_without compiler_bootstrap
 
 Name:           MicroHs
 Version:        0.8.4.0
