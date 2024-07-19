@@ -11,7 +11,7 @@
 %bcond_without compiler_bootstrap
 
 Name:           MicroHs
-Version:        0.9.11.0
+Version:        0.9.13.0
 Release:        1%{?dist}
 Summary:        A compiler for a subset of Haskell
 
@@ -95,6 +95,9 @@ MHS_PREFIX=%{buildroot}%{mhsdir} %{buildroot}%{_bindir}/mhs Example -r
 
 
 %changelog
+* Fri Jul 19 2024 Jens Petersen <petersen@redhat.com> - 0.9.13.0-1
+- update to 0.9.13
+
 * Tue Apr 16 2024 Jens Petersen <petersen@redhat.com> - 0.9.8.0-1
 - update to 0.9.8
 
