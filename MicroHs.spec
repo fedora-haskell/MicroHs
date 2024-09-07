@@ -11,7 +11,7 @@
 %bcond_without compiler_bootstrap
 
 Name:           MicroHs
-Version:        0.9.13.0
+Version:        0.9.17.0
 Release:        1%{?dist}
 Summary:        A compiler for a subset of Haskell
 
@@ -69,7 +69,7 @@ make %{?with_compiler_bootstrap:bootstrap}
 # End cabal-rpm install
 %else
 %define mhsdir %{_libdir}/mhs-%{version}
-make install PREFIX=%{buildroot}%{mhsdir}
+make oldinstall PREFIX=%{buildroot}%{mhsdir}
 
 mkdir %{buildroot}%{_bindir}
 install %{SOURCE1} %{buildroot}%{_bindir}/mhs
@@ -95,6 +95,9 @@ MHS_PREFIX=%{buildroot}%{mhsdir} %{buildroot}%{_bindir}/mhs Example -r
 
 
 %changelog
+* Sat Sep  7 2024 Jens Petersen <petersen@redhat.com> - 0.9.17.0-1
+- update to 0.9.17
+
 * Fri Jul 19 2024 Jens Petersen <petersen@redhat.com> - 0.9.13.0-1
 - update to 0.9.13
 
