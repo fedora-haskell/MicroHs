@@ -11,7 +11,7 @@
 %bcond_without compiler_bootstrap
 
 Name:           MicroHs
-Version:        0.10.7.0
+Version:        0.11.4.0
 Release:        1%{?dist}
 Summary:        A small compiler for Haskell
 
@@ -36,6 +36,7 @@ BuildRequires:  ghc-text-devel
 BuildRequires:  ghc-time-devel
 %else
 BuildRequires:  gcc
+BuildRequires:  gmp-devel
 BuildRequires:  make
 %endif
 # End cabal-rpm deps
@@ -94,6 +95,9 @@ MHS_PREFIX=%{buildroot}%{mhsdir} %{buildroot}%{_bindir}/mhs Example -r
 
 
 %changelog
+* Fri Feb 21 2025 Jens Petersen  <petersen@redhat.com> - 0.11.4.0-1
+- update to 0.11.4
+
 * Fri Jan 10 2025 Jens Petersen <petersen@redhat.com> - 0.10.7.0-1
 - update to 0.10.7
 
