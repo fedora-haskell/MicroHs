@@ -4,21 +4,23 @@
 # workaround "Empty %files file BUILD/MicroHs-0.8.4.0/debugsourcefiles.list"
 %define debug_package %{nil}
 
-# fails on i686
+%global forgeurl https://github.com/augustss/MicroHs
 
+# fails on i686
 # currently not fully wired up
 %bcond_with ghc
 %bcond_without compiler_bootstrap
 
 Name:           MicroHs
-Version:        0.13.0.0
+Version:        0.14.20.0
+%forgemeta
 Release:        1%{?dist}
 Summary:        A small compiler for Haskell
 
 License:        Apache-2.0
-URL:            https://hackage.haskell.org/package/MicroHs
+URL:            %{forgeurl}
 # Begin cabal-rpm sources:
-Source0:        https://hackage.haskell.org/package/%{name}-%{version}/%{name}-%{version}.tar.gz
+Source0:        %{forgesource}
 # End cabal-rpm sources
 Source1:        mhs.in
 
@@ -97,6 +99,9 @@ MHS_PREFIX=%{buildroot}%{mhsdir} %{buildroot}%{_bindir}/mhs Example -r
 
 
 %changelog
+* Mon Oct 13 2025 Jens Petersen <petersen@redhat.com> - 0.14.20.0-1
+- update to 0.14.20.0
+
 * Fri Aug 01 2025 Jens Petersen <petersen@redhat.com> - 0.13.0.0-1
 - update to 0.13.0
 
