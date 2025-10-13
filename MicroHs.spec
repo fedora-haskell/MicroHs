@@ -6,7 +6,6 @@
 
 %global forgeurl https://github.com/augustss/MicroHs
 
-# fails on i686
 # currently not fully wired up
 %bcond_with ghc
 %bcond_without compiler_bootstrap
@@ -44,7 +43,6 @@ BuildRequires:  gmp-devel
 BuildRequires:  make
 %endif
 # End cabal-rpm deps
-ExcludeArch:    %{ix86}
 
 %description
 A compiler for an extended subset of Haskell-2010. The compiler translates to
@@ -101,6 +99,7 @@ MHS_PREFIX=%{buildroot}%{mhsdir} %{buildroot}%{_bindir}/mhs Example -r
 %changelog
 * Mon Oct 13 2025 Jens Petersen <petersen@redhat.com> - 0.14.20.0-1
 - update to 0.14.20.0
+- reenable i686
 
 * Fri Aug 01 2025 Jens Petersen <petersen@redhat.com> - 0.13.0.0-1
 - update to 0.13.0
