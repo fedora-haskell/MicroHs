@@ -11,7 +11,7 @@
 %bcond_without compiler_bootstrap
 
 Name:           MicroHs
-Version:        0.15.5.0
+Version:        0.15.12.0
 %forgemeta
 Release:        1%{?dist}
 Summary:        A small compiler for Haskell
@@ -97,6 +97,9 @@ MHS_PREFIX=%{buildroot}%{mhsdir} %{buildroot}%{_bindir}/mhs Example -r
 
 
 %changelog
+* Tue May 26 2026 Jens Petersen <petersen@redhat.com> - 0.15.12.0-1
+- https://github.com/augustss/MicroHs/compare/v0.15.5.0...v0.15.12.0
+
 * Mon Apr 13 2026 Jens Petersen <petersen@redhat.com> - 0.15.5.0-1
 - update to 0.15.5.0
 
